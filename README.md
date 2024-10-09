@@ -1,5 +1,7 @@
 
 # OpenStra
+<span style="color: gray; font-style: italic;">v1.0.0</span>
+
 
 Ce projet est une application de cartographie interactive qui utilise **l'API Overpass** pour récupérer des données de cartographie et implémente l'algorithme de **Dijkstra** pour calculer le chemin le plus court entre deux points sur une carte centrée sur *Genté, FR*. L'application permet aux utilisateurs de cliquer sur la carte pour sélectionner des points de départ et d'arrivée, puis de visualiser le chemin le plus court entre ces deux points.
 
