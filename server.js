@@ -6,21 +6,11 @@ const path = require('path');
 
 const app = new Koa();
 const router = new Router();
-const { calculateShortestPath } = require('./public/pathSearcher');
 // Middleware pour servir les fichiers statiques dans /public
 app.use(serve(path.join(__dirname, 'public')));
 
 app.use(bodyParser());
 
-router.post('/route', async (ctx) => {
-    const { start, end } = ctx.request.body;
-
-    // Appeler l'algorithme pour calculer le chemin
-    const route = calculateShortestPath(start, end);
-
-    // Retourner le chemin sous forme de tableau de coordonnées
-    ctx.body = { route };
-});
 
 app
   .use(router.routes())
